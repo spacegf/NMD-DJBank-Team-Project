@@ -17,7 +17,7 @@ namespace Character.BasicControls
             public KeyCode Right = KeyCode.RightArrow;
             public KeyCode Forward = KeyCode.UpArrow;
 			
-			
+			public Vector3 position; 
 			
 			public GameObject lefty;
 			public GameObject righty;
@@ -26,7 +26,7 @@ namespace Character.BasicControls
 			void  Start () {
 			lefty = GameObject.Find("/cart/left");
 			righty = GameObject.Find("/cart/right");
-			capsule = GameObject.Find("/cart/capsule");
+			capsule = GameObject.Find("/cart/Capsule");
 			 }
 			
             public void UpdateMovement()
@@ -42,8 +42,9 @@ namespace Character.BasicControls
                 //}
                 if (Input.GetKey(Right))
                 {
-                    float step = strafeSpeed * Time.deltaTime;
-					transform.position = Vector3.MoveTowards(capsule.transform.position, righty.position, step);
+				
+                float step = strafeSpeed * Time.deltaTime;
+				capsule.transform.position = Vector3.MoveTowards(capsule.transform.position, righty.transform.position, step);
                 }
                 if (Input.GetKey(Left))
                 {
