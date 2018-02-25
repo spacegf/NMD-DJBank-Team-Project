@@ -42,7 +42,7 @@ namespace Character.BasicControls
                 //}
                 if (Input.GetKey(Right))
                 {
-					
+				
                 float step = strafeSpeed * Time.deltaTime;
 				capsule.transform.position = Vector3.MoveTowards(capsule.transform.position, righty.transform.position, step);
                 }
