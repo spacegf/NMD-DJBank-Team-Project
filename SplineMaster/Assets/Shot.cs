@@ -8,8 +8,8 @@ public class Shot : MonoBehaviour {
 	if(other.gameObject.tag == "Enemy"){	
 	Destroy(other.gameObject);
 		}
-    print("Collision detected with trigger object " + other.name);
-	if(other.gameObject.tag != "spaw"){	
+    //print("Collision detected with trigger object " + other.name);
+	if(other.gameObject.tag != "Spaw"){	
 	if(other.gameObject.tag != "Blast"){	
 	print("Deleted " + other.name);
 	Destroy(gameObject);

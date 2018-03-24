@@ -31,7 +31,7 @@ public class Detect : MonoBehaviour {
             shotSpawn.rotation);
 
         
-        shot.GetComponent<Rigidbody>().velocity = shot.transform.forward * 70;
+        shot.GetComponent<Rigidbody>().velocity = shot.transform.forward * 80;
 
        
         Destroy(shot, 2.0f);        
