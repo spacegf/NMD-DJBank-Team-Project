@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 2222e1dacae9c014ca1beffd58f5f8b5
+timeCreated: 1521925715
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Atom_Array
+    100002: CINEMA_4D_Editor
+    100004: Cube
+    100006: Cube_1
+    100008: Line_decor
+    100010: Plane
+    100012: purple_rect
+    100014: purple_rect_1
+    100016: purple_rect_2
+    100018: purple_rect_3
+    100020: //RootNode
+    100022: Wall_Planes
+    100024: White_Line
+    100026: white_line_thin
+    100028: white_line_thin_2
+    400000: Atom_Array
+    400002: CINEMA_4D_Editor
+    400004: Cube
+    400006: Cube_1
+    400008: Line_decor
+    400010: Plane
+    400012: purple_rect
+    400014: purple_rect_1
+    400016: purple_rect_2
+    400018: purple_rect_3
+    400020: //RootNode
+    400022: Wall_Planes
+    400024: White_Line
+    400026: white_line_thin
+    400028: white_line_thin_2
+    2000000: CINEMA_4D_Editor
+    2100000: White
+    2100002: Dark Purple
+    2100004: Bright White
+    2100006: Black
+    2300000: Cube
+    2300002: Cube_1
+    2300004: Plane
+    2300006: purple_rect
+    2300008: purple_rect_1
+    2300010: purple_rect_2
+    2300012: purple_rect_3
+    2300014: White_Line
+    2300016: white_line_thin
+    2300018: white_line_thin_2
+    3300000: Cube
+    3300002: Cube_1
+    3300004: Plane
+    3300006: purple_rect
+    3300008: purple_rect_1
+    3300010: purple_rect_2
+    3300012: purple_rect_3
+    3300014: White_Line
+    3300016: white_line_thin
+    3300018: white_line_thin_2
+    4300000: purple_rect_3
+    4300002: white_line_thin_2
+    4300004: purple_rect_2
+    4300006: purple_rect_1
+    4300008: white_line_thin
+    4300010: purple_rect
+    4300012: White_Line
+    4300014: Cube_1
+    4300016: Plane
+    4300018: Cube
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
