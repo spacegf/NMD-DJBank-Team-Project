@@ -20,4 +20,5 @@ public class BasicMove : MonoBehaviour
 
         rb.AddForce(movement * speed);
     }
+	
 }

@@ -16,4 +16,6 @@ public class Move : MonoBehaviour {
         //Moves Left and right along x Axis                               //Left/Right
     transform.Translate(Vector3.right * Time.deltaTime * Input.GetAxis("Horizontal")* moveSpeed);      
     }
+	
+	
 }
