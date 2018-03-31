@@ -9,10 +9,14 @@ public class Shot : MonoBehaviour {
 	Destroy(other.gameObject);
 		}
     //print("Collision detected with trigger object " + other.name);
-	if(other.gameObject.tag != "Spaw"){	
-	if(other.gameObject.tag != "Blast"){	
-	print("Deleted " + other.name);
+	else if(other.gameObject.tag != "Spaw"){	
+	if(other.gameObject.tag != "Blast"){
+	if(other.gameObject.tag != "Terrain"){
+		if(other.gameObject.tag != "Shot"){
+		print("Deleted " + name);
 	Destroy(gameObject);
+		}
+	}
 }
 }
 }
