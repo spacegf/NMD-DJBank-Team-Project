@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Detect : MonoBehaviour {
     
+	//public GUIText scoreText;
+    public int score;
+	
 	public KeyCode k = KeyCode.K;
 	
 	//public Transform shot;
@@ -10,6 +13,14 @@ public class Detect : MonoBehaviour {
     //public float speed;
 	public GameObject Shot;
     public Transform shotSpawn;
+	
+	
+    void Start ()
+    {
+		score = 0;
+        UpdateScore ();
+	}
+	
 	
 	 void Update()
     {
@@ -50,7 +61,16 @@ if (Input.GetKeyUp(k)){
 			}
 	}
 }
-       
+         public void AddScore(int gain)
+    {
+        score += gain;
+        UpdateScore ();
+    }
+	void UpdateScore()
+    {
+		print("Score: " + score);
+        //scoreText.text = "Score: " + score;
+    }
 		     
 
 }
