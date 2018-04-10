@@ -16,11 +16,11 @@ public class Ship : MonoBehaviour {
 
 void OnTriggerEnter(Collider other)
 {
-	if(other.gameObject.tag == "Enemy"){	
+	if(other.gameObject.tag == "Enemy"){
 	Destroy(other.gameObject);
 		}
 	if(other.gameObject.tag == "Coin"){
-	detect.AddScore(5);
+	detect.AddScore(10);
 	Destroy(other.gameObject);
 	}
 		if(other.gameObject.tag != "Spaw"){

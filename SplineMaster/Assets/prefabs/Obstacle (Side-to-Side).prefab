@@ -84,7 +84,6 @@ GameObject:
   - component: {fileID: 23911559238408580}
   - component: {fileID: 114896277220928036}
   - component: {fileID: 114185709050288428}
-  - component: {fileID: 114687578685234482}
   - component: {fileID: 54454684232118038}
   m_Layer: 0
   m_Name: Cube (3)
@@ -248,17 +247,6 @@ MonoBehaviour:
   AutoStart: 1
   AutoClose: 1
   HideOnExecute: 1
---- !u!114 &114687578685234482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1846687616663392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114896277220928036
 MonoBehaviour:
   m_ObjectHideFlags: 1
