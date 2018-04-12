@@ -7,6 +7,9 @@ public class Detect : MonoBehaviour {
 	public Text scoreText;
     private int score;
 	
+	public Text liveText;
+    private int lives;
+	
 	public KeyCode k = KeyCode.K;
 	
 	//public Transform shot;
@@ -70,9 +73,15 @@ if (Input.GetKeyUp(k)){
 	void UpdateScore()
     {
 		print("Score: " + score);
-		scoreText.GetComponent<Text>().text = "Score: " + score;
-        scoreText.text = "Score: " + score;
+		scoreText.GetComponent<Text>().text = "" + score;
+        
     }
-		     
+	
+void UpdateTime()
+    {
+		print("Score: " + score);
+		//scoreText.GetComponent<Text>().text = "Score: " + score;
+       // scoreText.text = "Score: " + score;
+    }	
 
 }
