@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Detect : MonoBehaviour {
     
-	public GUIText scoreText;
+	public Text scoreText;
     private int score;
 	
 	public KeyCode k = KeyCode.K;
@@ -69,6 +70,7 @@ if (Input.GetKeyUp(k)){
 	void UpdateScore()
     {
 		print("Score: " + score);
+		scoreText.GetComponent<Text>().text = "Score: " + score;
         scoreText.text = "Score: " + score;
     }
 		     
