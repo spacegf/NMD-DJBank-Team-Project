@@ -7,8 +7,9 @@ public class Detect : MonoBehaviour {
 	public Text scoreText;
     private int score;
 	
-	public Text liveText;
-    private int lives;
+	 float currCountdownValue;
+	 public Text timeText;
+    private float time;
 	
 	public KeyCode k = KeyCode.K;
 	
@@ -22,6 +23,7 @@ public class Detect : MonoBehaviour {
     void Start ()
     {
 		score = 0;
+		StartCoroutine(StartCountdown());
         UpdateScore ();
 	}
 	
@@ -76,12 +78,31 @@ if (Input.GetKeyUp(k)){
 		scoreText.GetComponent<Text>().text = "" + score;
         
     }
+
+
+
+ public IEnumerator StartCountdown(float countdownValue = 300)
+ {
+     currCountdownValue = countdownValue;
+     while (currCountdownValue > -1)
+     {
+		// time == currCountdownValue;
+         Debug.Log("Countdown: " + currCountdownValue);
+		 timeText.GetComponent<Text>().text = "" + currCountdownValue;
+         yield return new WaitForSeconds(1.0f);
+         currCountdownValue--;
+     }
+	 if (currCountdownValue < 1)
+     {
+		 Debug.Log("End");
+	 }
+ }
 	
 void UpdateTime()
     {
-		print("Score: " + score);
-		//scoreText.GetComponent<Text>().text = "Score: " + score;
-       // scoreText.text = "Score: " + score;
+		//print("Score: " + score);
+		//timeText.GetComponent<Text>().text = "" + time;
+        //timeText.text = ": " + time;
     }	
 
 }
