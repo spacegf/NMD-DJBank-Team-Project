@@ -1,15 +1,20 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Detect : MonoBehaviour {
     
 	public Text scoreText;
     private int score;
+	private int HiScore;
+	public Text HiScoreText;
 	
 	 float currCountdownValue;
-	 public Text timeText;
+	public Text timeText;
     private float time;
+	
+	public LB_Leaderboard _scoreManager;
 	
 	public KeyCode k = KeyCode.K;
 	
@@ -18,6 +23,8 @@ public class Detect : MonoBehaviour {
     //public float speed;
 	public GameObject Shot;
     public Transform shotSpawn;
+	
+	private static bool gameOver;
 	
 	
     void Start ()
@@ -32,15 +39,25 @@ public class Detect : MonoBehaviour {
     {
 	 var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
      var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-if (Input.GetKeyUp(k)){
+		if (Input.GetKeyUp(k)){
 				Fire();
 					
-			}
         transform.Rotate(0, 0, 0);
         transform.Translate(0, 0, z);
-
-	
+			
 	}
+	}
+	
+	void GameOver()
+    {
+		if (gameOver == true) {
+				Debug.Log("End");
+				//if (score > ScoreKeeper.instance.highestScore){
+				PlayerPrefs.SetInt("score", score);
+				SceneManager.LoadScene("ShowLeaderboard");
+		 }
+		 	}
+	//}
 	
 	void Fire()
     {
@@ -49,18 +66,13 @@ if (Input.GetKeyUp(k)){
             Shot,
             shotSpawn.position,
             shotSpawn.rotation);
-
         
         shot.GetComponent<Rigidbody>().velocity = shot.transform.forward * -120;
-
-       
         Destroy(shot, 2.0f);        
     }
 	
 		void OnTriggerStay(Collider other){
 	 if(other.gameObject.tag == "Enemy"){
-		//print("Still colliding with trigger object " + other.name);
-			
 			if (Input.GetKeyUp(k)){
 				Fire();
 					
@@ -81,7 +93,7 @@ if (Input.GetKeyUp(k)){
 
 
 
- public IEnumerator StartCountdown(float countdownValue = 300)
+ public IEnumerator StartCountdown(float countdownValue = 10)
  {
      currCountdownValue = countdownValue;
      while (currCountdownValue > -1)
@@ -94,7 +106,8 @@ if (Input.GetKeyUp(k)){
      }
 	 if (currCountdownValue < 1)
      {
-		 Debug.Log("End");
+ 		 gameOver = true;
+		 GameOver();
 	 }
  }
 	

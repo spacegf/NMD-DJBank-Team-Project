@@ -190,7 +190,6 @@ GameObject:
   - component: {fileID: 694652076}
   - component: {fileID: 694652078}
   - component: {fileID: 694652077}
-  - component: {fileID: 694652079}
   m_Layer: 5
   m_Name: Screen2
   m_TagString: Untagged
@@ -248,19 +247,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 694652075}
---- !u!114 &694652079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 694652075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a7ee24db8af9448a58ac6126e01529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  e: 101
-  Screen2: {fileID: 694652075}
 --- !u!1 &833493920
 GameObject:
   m_ObjectHideFlags: 0

@@ -455,6 +455,7 @@ RectTransform:
   - {fileID: 419959980}
   - {fileID: 1817386305}
   - {fileID: 195909278}
+  - {fileID: 1954578960}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1486,31 +1487,31 @@ Prefab:
       objectReference: {fileID: 1391322074}
     - target: {fileID: 4001795324993666, guid: 146d9931271c2df4caa860f3f1abde6a, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.032415234
+      value: 0.0036625147
       objectReference: {fileID: 0}
     - target: {fileID: 4001795324993666, guid: 146d9931271c2df4caa860f3f1abde6a, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.7973908
+      value: -0.808375
       objectReference: {fileID: 0}
     - target: {fileID: 4001795324993666, guid: 146d9931271c2df4caa860f3f1abde6a, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.04300368
+      value: 0.0050297477
       objectReference: {fileID: 0}
     - target: {fileID: 4001795324993666, guid: 146d9931271c2df4caa860f3f1abde6a, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.6010556
+      value: 0.5886351
       objectReference: {fileID: 0}
     - target: {fileID: 4001795324993666, guid: 146d9931271c2df4caa860f3f1abde6a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1172.7253
+      value: 817.7145
       objectReference: {fileID: 0}
     - target: {fileID: 4001795324993666, guid: 146d9931271c2df4caa860f3f1abde6a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 149.14331
+      value: 154.41025
       objectReference: {fileID: 0}
     - target: {fileID: 4001795324993666, guid: 146d9931271c2df4caa860f3f1abde6a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1895.0961
+      value: -2001.7524
       objectReference: {fileID: 0}
     - target: {fileID: 114437749901157180, guid: 146d9931271c2df4caa860f3f1abde6a,
         type: 2}
@@ -1978,6 +1979,11 @@ Prefab:
       propertyPath: timeText
       value: 
       objectReference: {fileID: 419959981}
+    - target: {fileID: 114516057282587694, guid: 338b0daeb1c91134993b51d3ec466bb0,
+        type: 2}
+      propertyPath: HiScoreText
+      value: 
+      objectReference: {fileID: 1954578961}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 338b0daeb1c91134993b51d3ec466bb0, type: 2}
   m_IsPrefabParent: 0
@@ -2302,11 +2308,131 @@ Transform:
   m_PrefabParentObject: {fileID: 4823253062868630, guid: c635713f4d8d2cd4b93ffaf41f1ed9e7,
     type: 2}
   m_PrefabInternal: {fileID: 1293221719}
+--- !u!1 &1954578959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1954578960}
+  - component: {fileID: 1954578962}
+  - component: {fileID: 1954578961}
+  m_Layer: 5
+  m_Name: HiScore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1954578960
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954578959}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 373946265}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 361, y: -98}
+  m_SizeDelta: {x: 66, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1954578961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954578959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9852941, g: 0.912846, b: 0.912846, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ad0bfe54fc79ad2439ddfe5c352871b1, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 2
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &1954578962
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954578959}
 --- !u!4 &2037730220 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4685556878658998, guid: 580cc9ecef59e5447bdd1e646486205f,
     type: 2}
   m_PrefabInternal: {fileID: 660989577}
+--- !u!1 &2073537551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2073537552}
+  - component: {fileID: 2073537553}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2073537552
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073537551}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 277.21094, y: 188.99219, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2073537553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073537551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7df90b2fe4950d4a873e533e8db77b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreBoardIndex: 0
+  maxNameLength: 10
+  numberOfScores: 10
+  defaultName: Wy
+  defaultScore: 0
+  lowestFirst: 0
 --- !u!1001 &2120031539
 Prefab:
   m_ObjectHideFlags: 0
