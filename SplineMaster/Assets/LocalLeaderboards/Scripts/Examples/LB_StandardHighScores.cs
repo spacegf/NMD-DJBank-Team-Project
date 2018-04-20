@@ -65,7 +65,7 @@ public class LB_StandardHighScores : MonoBehaviour
 	public void PlayAgain ()
 	{
 		// load the game scene
-		SceneManager.LoadScene ("Game");
+		SceneManager.LoadScene ("displays");
 	}
 	
 	public void Track2 ()
@@ -74,11 +74,6 @@ public class LB_StandardHighScores : MonoBehaviour
 		SceneManager.LoadScene ("track2");
 	}
 	
-	public void Displays ()
-	{
-		// load the main menu
-		SceneManager.LoadScene ("displays");
-	}
 
 	// ---------------------------------------------------------------------
 
@@ -99,7 +94,7 @@ public class LB_StandardHighScores : MonoBehaviour
 
 		// when the game ends, it saves the final score into a player pref. we pick up the
 		// final score out of the player pref to use here on the game over screen:
-		finalGameScore = PlayerPrefs.GetInt ("finalScore");
+		finalGameScore = PlayerPrefs.GetInt ("score");
 
 		// did the user get a high score? do they need to enter their name?
 		newHighScore = _scoreManager.DidGetHighScore (finalGameScore);
