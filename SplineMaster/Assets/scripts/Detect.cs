@@ -24,40 +24,40 @@ public class Detect : MonoBehaviour {
 	public GameObject Shot;
     public Transform shotSpawn;
 	
+	float totalTime = 120f;
 	private static bool gameOver;
 	
 	
     void Start ()
     {
 		score = 0;
-		StartCoroutine(StartCountdown());
         UpdateScore ();
 	}
 	
 	
 	 void Update()
     {
-	 var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-     var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+		totalTime -= Time.deltaTime;
+        UpdateLevelTimer(totalTime );
+		
+		var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+		var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
 		if (Input.GetKeyUp(k)){
 				Fire();
 					
         transform.Rotate(0, 0, 0);
         transform.Translate(0, 0, z);
-			
-	}
+		}
 	}
 	
 	void GameOver()
     {
 		if (gameOver == true) {
 				Debug.Log("End");
-				//if (score > ScoreKeeper.instance.highestScore){
 				PlayerPrefs.SetInt("score", score);
 				SceneManager.LoadScene("ShowLeaderboard");
 		 }
 		 	}
-	//}
 	
 	void Fire()
     {
@@ -92,30 +92,27 @@ public class Detect : MonoBehaviour {
     }
 
 
-
- public IEnumerator StartCountdown(float countdownValue = 10)
- {
-     currCountdownValue = countdownValue;
-     while (currCountdownValue > -1)
-     {
-		// time == currCountdownValue;
-         Debug.Log("Countdown: " + currCountdownValue);
-		 timeText.GetComponent<Text>().text = "" + currCountdownValue;
-         yield return new WaitForSeconds(1.0f);
-         currCountdownValue--;
-     }
-	 if (currCountdownValue < 1)
-     {
- 		 gameOver = true;
-		 GameOver();
-	 }
- }
-	
-void UpdateTime()
-    {
-		//print("Score: " + score);
-		//timeText.GetComponent<Text>().text = "" + time;
-        //timeText.text = ": " + time;
-    }	
-
+public void UpdateLevelTimer(float totalSeconds)
+         {
+             int minutes = Mathf.FloorToInt(totalSeconds / 60f);
+             int seconds = Mathf.RoundToInt(totalSeconds % 60f);
+ 
+             string formatedSeconds = seconds.ToString();
+ 
+             if (seconds == 60)
+             {
+                 seconds = 0;
+                 minutes += 1;
+             }
+ 
+            timeText.GetComponent<Text>().text = minutes.ToString("00") + ":" + seconds.ToString("00");
+			Debug.Log("Countdown: " + minutes.ToString("00") + ":" + seconds.ToString("00"));
+			 if (seconds == 0){
+				 if (minutes == 0){
+			gameOver = true;
+			GameOver();
+			}
+			}
+         }
+		 
 }
