@@ -67,7 +67,7 @@ public class Detect : MonoBehaviour {
             shotSpawn.position,
             shotSpawn.rotation);
         
-        shot.GetComponent<Rigidbody>().velocity = shot.transform.forward * -120;
+        shot.GetComponent<Rigidbody>().velocity = shot.transform.forward * -60;
         Destroy(shot, 2.0f);        
     }
 	

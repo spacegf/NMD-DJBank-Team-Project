@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class LB_JoystickTextInputController : MonoBehaviour
 {
 
-	public int maxLength = 6;
+	public int maxLength = 8;
 
 	public bool autoSubmitOnMaxLength;
 	public bool useFire2ForSubmit= true;
