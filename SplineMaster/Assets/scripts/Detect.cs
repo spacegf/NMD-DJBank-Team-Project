@@ -24,7 +24,7 @@ public class Detect : MonoBehaviour {
 	public GameObject Shot;
     public Transform shotSpawn;
 	
-	float totalTime = 120f;
+	float totalTime = 10f;
 	private static bool gameOver;
 	
 	
