@@ -3,22 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Special component to extrude shape along a spline.
-/// 
-/// Note : This component is not lightweight and should be used as-is mostly for prototyping. It allows to quickly create meshes by
-/// drawing only the 2D shape to extrude along the spline. The result is not intended to be used in a production context and you will most likely
-/// create eventualy the mesh you need in a modeling tool to save performances and have better control.
-/// 
-/// The special editor of this component allow you to draw a 2D shape with vertices, normals and U texture coordinate. The V coordinate is set
-/// for the whole spline, by setting the number of times the texture must be repeated.
-/// 
-/// All faces of the resulting mesh are smoothed. If you want to obtain an edge without smoothing, you will have to overlap two vertices and set two normals.
-/// 
-/// You can expand the vertices list in the inspector to access data and enter precise values.
-/// 
-/// This component doesn't offer much control as Unity is not a modeling tool. That said, you should be able to create your own version easily.
-/// </summary>
+
+//Replaced my own extrusion with the one based on the Unite 2015 presentation by Joachim Holmer from Benoit Dumas
+//Comments to follow
+
 [ExecuteInEditMode]
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
@@ -69,7 +57,7 @@ public class SplineExtrusion : MonoBehaviour {
     private List<OrientedPoint> GetPath()
     {
         var path = new List<OrientedPoint>();
-        for (float t = 0; t < spline.nodes.Count-1; t += 1/10.0f)
+        for (float t = 0; t < spline.nodes.Count-1; t += 1/30.0f) //subdivisions 
         {
             var point = spline.GetLocationAlongSpline(t);
             var rotation = CubicBezierCurve.GetRotationFromTangent(spline.GetTangentAlongSpline(t));
@@ -91,12 +79,23 @@ public class SplineExtrusion : MonoBehaviour {
         var normals = new Vector3[vertCount];
         var uvs = new Vector2[vertCount];
 
+        ///<summary>
+        /// Originally wanted to get normals from the mesh 
+        /// 
+        ///     Vector3 GetNormals( Vector3[] pts, t ){
+        ///         Vector3 tng = GetTangent( pts, t);
+        ///         return new Vector3( -tng.y, tng.x, 0.0f );
+        ///     }
+        /// 
+        /// Above only works in 2D
+        /// </summary>
+
         int index = 0;
         foreach(OrientedPoint op in path) {
             foreach(Vertex v in ShapeVertices) {
-                vertices[index] = op.LocalToWorld(v.point);
-                normals[index] = op.LocalToWorldDirection(v.normal);
-                uvs[index] = new Vector2(v.uCoord, path.IndexOf(op) / ((float)edgeLoops)* TextureScale);
+                vertices[index] = op.LocalToWorld(v.point); //vertices
+                normals[index] = op.LocalToWorldDirection(v.normal); //normals
+                uvs[index] = new Vector2(v.uCoord, path.IndexOf(op) / ((float)edgeLoops)* TextureScale); //UV mapping
                 index++;
             }
         }
@@ -117,6 +116,8 @@ public class SplineExtrusion : MonoBehaviour {
                 index++;
             }
         }
+
+        
 
         mf.sharedMesh.Clear();
         mf.sharedMesh.vertices = vertices;
