@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/LocalLeaderboards/ExampleScenes/MainMenu.unity
     guid: a422ea528d1402448bf96896b38d2163
   - enabled: 1
-    path: Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
+    path: Assets/scenes/ShowLeaderboard.unity
     guid: c1acccfe53c488f40aa1782b2b4681b6
   - enabled: 1
     path: Assets/LocalLeaderboards/ExampleScenes/Game.unity
     guid: a527beb3a0c485f41bf45bf49c87e053
+  - enabled: 1
+    path: Assets/scenes/trackD.unity
+    guid: da0f882dbc15dd949803e2243a461fc6
