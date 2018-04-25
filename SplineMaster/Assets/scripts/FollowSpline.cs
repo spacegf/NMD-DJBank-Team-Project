@@ -5,7 +5,7 @@ using UnityEngine;
 
 //move along spline when not in runtime
 
-//script mostly adapted from Unite 2015 presentation by Joachim Holmer
+//script mostly adapted from concepts in Unite 2015 presentation by Joachim Holmer
 
 [RequireComponent(typeof(Spline))]//links it to the Spline Extrusion plugin
 public class FollowSpline : MonoBehaviour {

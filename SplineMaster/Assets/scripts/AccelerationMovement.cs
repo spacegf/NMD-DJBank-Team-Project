@@ -40,6 +40,7 @@ public class AccelerationMovement : MonoBehaviour
 	Vector3 lastPos = Vector3.zero;
 	Vector3 deltaPos = Vector3.zero;
 	Vector3 screenMovement = Vector3.zero;
+	Vector3 initRay = Vector3.zero;
 	Vector3 jumpStartPos;
 	Vector3 jumpOffset;
 	Vector3 fallOffset;
@@ -50,7 +51,7 @@ public class AccelerationMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 		jumpOffset = new Vector3(0, jumpSpeed, 0);
 		fallOffset = new Vector3(0, fallSpeed, 0);
-		initial_rotation = playerCraft.transform.localRotation;
+		initial_rotation = playerCraft.transform.localRotation; 
 	}
 
     void Update()
@@ -208,11 +209,18 @@ public class AccelerationMovement : MonoBehaviour
 		int ret;//read values from driver
 		do { ret = wiimote.ReadWiimoteData(); } while (ret > 0);
 
-		Vector3 targetRay = GetAccelVector();
+
+		Vector3 postRay = GetAccelVector() - initRay;
+		float rotAmt = Vector3.Angle(postRay, initRay);
+		//Vector3 rotInstance = new Vector3(0, rotAmt, 0);;
+
+		//transform.Rotate(Vector3.left, rotAmt);
+		Debug.Log("rotAmt");
+
 		//Vector3 rotPos = GetAccelVector();
-		//Quaternion rotStep = Quaternion.LookRotation(playerCraft.transform.rotation * GetAccelVector());
+		//Quaternion rotStep = Quaternion.LookRotation(playerCraft.transform.rotation * rotInstance);
 		//playerCraft.transform.rotation = Quaternion.Slerp(playerCraft.transform.rotation, rotStep, Time.time * rotDamping);
-		
+		initRay = GetAccelVector();
 	}
 
 	//acceleration from wii remote
