@@ -43,6 +43,7 @@ public class LB_StandardHighScores : MonoBehaviour
 	[Space(10)]
     // UI panel for entering player name via keyboard
     public GameObject enterNamePanel;
+	public GameObject Image;
 
 	// UI panel for entering player name via joystick
 	public GameObject enterNamePanel_joystick;
@@ -216,6 +217,7 @@ public class LB_StandardHighScores : MonoBehaviour
 
 		// now we need to update the leaderboard text to show the new entry
 		UpdateUIText ();
+		Image.SetActive(false);
 
 		// reset the stored final score so that it won't be submitted again
 		PlayerPrefs.SetInt ("finalScore", 0);
