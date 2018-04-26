@@ -57,7 +57,7 @@ public class SplineExtrusion : MonoBehaviour {
     private List<OrientedPoint> GetPath()
     {
         var path = new List<OrientedPoint>();
-        for (float t = 0; t < spline.nodes.Count-1; t += 1/30.0f) //subdivisions 
+        for (float t = 0; t < spline.nodes.Count-1; t += 1/6.0f) //subdivisions 
         {
             var point = spline.GetLocationAlongSpline(t);
             var rotation = CubicBezierCurve.GetRotationFromTangent(spline.GetTangentAlongSpline(t));

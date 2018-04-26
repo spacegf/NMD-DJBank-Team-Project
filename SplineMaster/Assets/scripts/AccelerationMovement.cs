@@ -210,17 +210,19 @@ public class AccelerationMovement : MonoBehaviour
 		do { ret = wiimote.ReadWiimoteData(); } while (ret > 0);
 
 
-		Vector3 postRay = GetAccelVector() - initRay;
-		float rotAmt = Vector3.Angle(postRay, initRay);
+		//Vector3 postRay = GetAccelVector() - initRay;
+		//float rotAmt = Vector3.Angle(postRay, initRay);
 		//Vector3 rotInstance = new Vector3(0, rotAmt, 0);;
 
+		playerCraft.transform.rotation *= Quaternion.Euler((-GetAccelVector().x ), 0, 0);
+
 		//transform.Rotate(Vector3.left, rotAmt);
-		Debug.Log("rotAmt");
+		//Debug.Log("rotAmt");
 
 		//Vector3 rotPos = GetAccelVector();
 		//Quaternion rotStep = Quaternion.LookRotation(playerCraft.transform.rotation * rotInstance);
 		//playerCraft.transform.rotation = Quaternion.Slerp(playerCraft.transform.rotation, rotStep, Time.time * rotDamping);
-		initRay = GetAccelVector();
+		//initRay = GetAccelVector();
 	}
 
 	//acceleration from wii remote
