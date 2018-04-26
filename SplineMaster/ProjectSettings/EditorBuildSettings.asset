@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/gameOver.unity
     guid: 5be4bf81390d27347bf22cddce65502e
+  - enabled: 1
+    path: Assets/scenes/track2.unity
+    guid: 82b379f372da27048a3627f71549e661
