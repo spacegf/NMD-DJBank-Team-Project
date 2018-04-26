@@ -735,7 +735,7 @@ MonoBehaviour:
   playerNameInputField_Joystick: {fileID: 546849668}
   enterNamePanel: {fileID: 1991513103}
   enterNamePanel_joystick: {fileID: 783736064}
-  showResetButton: 0
+  showResetButton: 1
   resetButton: {fileID: 665653440}
 --- !u!224 &408487738
 RectTransform:

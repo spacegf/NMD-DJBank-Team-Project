@@ -55,7 +55,7 @@ public class Detect : MonoBehaviour {
 		if (gameOver == true) {
 				Debug.Log("End");
 				PlayerPrefs.SetInt("score", score);
-				SceneManager.LoadScene("ShowLeaderboard");
+				SceneManager.LoadScene("gameOver");
 		 }
 		 	}
 	
