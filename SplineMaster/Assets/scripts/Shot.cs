@@ -15,10 +15,10 @@ public class Shot : MonoBehaviour {
    
  void OnTriggerEnter(Collider other)
 {
-	
-	
 	if(other.gameObject.tag == "Enemy"){	
 	detect.AddScore(10);
+	Debug.Log("End");
+
 	Destroy(other.gameObject);
 		}
 		if(other.gameObject.tag == "Terrain"){	
