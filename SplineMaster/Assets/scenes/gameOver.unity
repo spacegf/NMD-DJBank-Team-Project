@@ -1523,7 +1523,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1337792768}
+      - m_Target: {fileID: 0}
         m_MethodName: ResetLeaderboard
         m_Mode: 1
         m_Arguments:
@@ -1691,7 +1691,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1337792770}
   - component: {fileID: 1337792769}
-  - component: {fileID: 1337792768}
   - component: {fileID: 1337792771}
   m_Layer: 5
   m_Name: Leaderboard_Controller
@@ -1700,30 +1699,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1337792768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1337792767}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d444eb24001c2aa47842fd72804590b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useJoystickEnterNameBox: 0
-  useFloatScoresInsteadofInts: 0
-  emptyName: Anon E. Mouse
-  _scoreManager: {fileID: 1337792769}
-  leaderboardUIText_rank: {fileID: 599162338}
-  leaderboardUIText_name: {fileID: 1749808502}
-  leaderboardUIText_score: {fileID: 309985084}
-  playerNameInputField: {fileID: 0}
-  playerNameInputField_Joystick: {fileID: 0}
-  enterNamePanel: {fileID: 0}
-  enterNamePanel_joystick: {fileID: 0}
-  showResetButton: 0
-  resetButton: {fileID: 1211815806}
 --- !u!114 &1337792769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,7 +1751,8 @@ MonoBehaviour:
   _scoreManager: {fileID: 1337792769}
   leaderboardUIText_rank: {fileID: 599162338}
   leaderboardUIText_name: {fileID: 1749808502}
-  leaderboardUIText_score: {fileID: 309985084}
+  leaderboardUIText_score: {fileID: 0}
+  currentScore: {fileID: 309985084}
   playerNameInputField: {fileID: 0}
   playerNameInputField_Joystick: {fileID: 0}
   enterNamePanel: {fileID: 0}

@@ -7,8 +7,8 @@ public class Detect : MonoBehaviour {
     
 	public Text scoreText;
     private int score;
-	private int HiScore;
-	public Text HiScoreText;
+	//private int HiScore;
+	//public Text HiScoreText;
 	
 	 float currCountdownValue;
 	public Text timeText;
@@ -24,7 +24,7 @@ public class Detect : MonoBehaviour {
 	public GameObject Shot;
     public Transform shotSpawn;
 	
-	float totalTime = 10f;
+	float totalTime = 180f;
 	private static bool gameOver;
 	
 	
@@ -67,7 +67,7 @@ public class Detect : MonoBehaviour {
             shotSpawn.position,
             shotSpawn.rotation);
         
-        shot.GetComponent<Rigidbody>().velocity = shot.transform.forward * -60;
+        shot.GetComponent<Rigidbody>().velocity = shot.transform.forward * 60;
         Destroy(shot, 2.0f);        
     }
 	

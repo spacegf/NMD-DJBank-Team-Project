@@ -31,6 +31,7 @@ public class HighScores : MonoBehaviour
 	public Text leaderboardUIText_rank;
 	public Text leaderboardUIText_name;
 	public Text leaderboardUIText_score;
+	public Text currentScore;
 
 	[Space(1)]
 
@@ -79,6 +80,7 @@ public class HighScores : MonoBehaviour
 
 	void Start ()
 	{
+				
 		// show or hide the reset leaderboard button (useful for development)
 		if ( showResetButton )
 		{
@@ -95,6 +97,7 @@ public class HighScores : MonoBehaviour
 		// when the game ends, it saves the final score into a player pref. we pick up the
 		// final score out of the player pref to use here on the game over screen:
 		finalGameScore = PlayerPrefs.GetInt ("score");
+		currentScore.text = finalGameScore + "\n";
 
 		// did the user get a high score? do they need to enter their name?
 		newHighScore = _scoreManager.DidGetHighScore (finalGameScore);
