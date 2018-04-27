@@ -5,30 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/scenes/displays.unity
     guid: 4727c72377b1f2f4aa158c479b330770
   - enabled: 1
-    path: Assets/LocalLeaderboards/ExampleScenes/MainMenu.unity
-    guid: a422ea528d1402448bf96896b38d2163
-  - enabled: 1
     path: Assets/scenes/ShowLeaderboard.unity
     guid: c1acccfe53c488f40aa1782b2b4681b6
-  - enabled: 1
-    path: Assets/LocalLeaderboards/ExampleScenes/Game.unity
-    guid: a527beb3a0c485f41bf45bf49c87e053
-  - enabled: 1
-    path: Assets/scenes/trackD.unity
-    guid: da0f882dbc15dd949803e2243a461fc6
-  - enabled: 1
-    path: Assets/scenes/track3.unity
-    guid: 8a8c570ead072124c97900d9bada29db
   - enabled: 1
     path: Assets/scenes/gameOver.unity
     guid: 5be4bf81390d27347bf22cddce65502e
   - enabled: 1
-    path: Assets/scenes/track2.unity
-    guid: 82b379f372da27048a3627f71549e661
+    path: Assets/scenes/TrackScenery.unity
+    guid: f9fb514134dd34750bbfc486d9abf163

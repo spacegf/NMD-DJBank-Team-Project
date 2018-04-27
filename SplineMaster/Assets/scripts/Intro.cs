@@ -43,7 +43,7 @@ public class Intro : MonoBehaviour {
 					Screen2.SetActive(true);
 			}
 			if (Input.GetKeyUp(t)){
-					SceneManager.LoadScene ("track2");
+					SceneManager.LoadScene ("TrackScenery");
 				//	Screen1.SetActive(true);
 					//Screen2.SetActive(false);
 
