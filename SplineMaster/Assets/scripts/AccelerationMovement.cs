@@ -214,7 +214,7 @@ public class AccelerationMovement : MonoBehaviour
 		//float rotAmt = Vector3.Angle(postRay, initRay);
 		//Vector3 rotInstance = new Vector3(0, rotAmt, 0);;
 
-		playerCraft.transform.rotation *= Quaternion.Euler((-GetAccelVector().x ), 0, 0);
+		playerCraft.transform.rotation *= Quaternion.Euler((-GetAccelVector().x * 3.0f), 0, 0);
 
 		//transform.Rotate(Vector3.left, rotAmt);
 		//Debug.Log("rotAmt");
