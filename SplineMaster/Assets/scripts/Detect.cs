@@ -106,7 +106,7 @@ public void UpdateLevelTimer(float totalSeconds)
              }
  
             timeText.GetComponent<Text>().text = minutes.ToString("00") + ":" + seconds.ToString("00");
-			Debug.Log("Countdown: " + minutes.ToString("00") + ":" + seconds.ToString("00"));
+			//Debug.Log("Countdown: " + minutes.ToString("00") + ":" + seconds.ToString("00"));
 			 if (seconds == 0){
 				 if (minutes == 0){
 			gameOver = true;
